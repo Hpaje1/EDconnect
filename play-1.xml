@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="url" value="http://172.20.238.38:7802/cba/wbs" />
+    <add key="urlaction" value="http://172.20.238.38:7802/cba/wbs?wsdl" />
+    <add key="enurl" value="https://172.20.238.38:7846/entrust2/service" />
+    <add key="enurlaction" value="https://172.20.238.38:7846/entrust2/service?wsdl" />
+    <add key="smsurl" value="http://10.100.12.135:8989/SMSService/SMSAlertService" />
+    <add key="smsurlaction" value="http://10.100.12.135:8989/SMSService/SMSAlertService?wsdl" />
+    <add key="accturl" value="http://172.20.238.38:7809/AccountOpeningIVR/Process" />
+    <add key="accturlaction" value="http://172.20.238.38:7809/AccountOpeningIVR/Process?wsdl" />
+    <add key="visaurl" value="http://172.20.238.38:7181/Card"/>
+    <add key="visaurlOne" value="http://172.20.238.38:7181/HotListCard"/>
+    <add key="ead_username" value="IVR" />
+    <add key="ead_password" value="waterfall" />
+    <add key="en_username" value="IVR" />
+    <add key="en_password" value="waterfall" />
+    <add key="urlcard1" value="http://172.20.238.38:7805/cms/listcards?wsdl" />
+    <add key="urlcard1action" value="http://CardMngt/execute" />
+    <add key="urlcard2" value="http://172.20.238.38:7805/cms/postlsvc?wsdl" />
+    <add key="urlcard2action" value="http://CardMngt/execute" />
+    <add key="urlblkacct" value="http://172.20.238.38:7809/AccountFreezeService/Freeze" />
+    <add key="urlblkacctaction" value="http://AccountFreezeService/process" />
+    <add key="swavloc" value="C:\inetpub\wwwroot\IVRServices\data\english\phrases\" />
+    <add key="swavurl" value="http://10.100.14.220:8080/IVRServices/data/english/phrases/" />
+    <add key="dwavloc" value="waterfall" />
+    <add key="demo" value="false" />
+    <add key="paidsms" value="false" />
+    <add key="debitfee" value="true" />
+    <add key="creditfee" value="true" />
+    <add key="qfileloc" value="c:\ddl\raju.txt" />
+    <add key="cscno" value="77000" />
+    <add key="csccard" value="77014" />
+    <add key="brcall" value="77011" />
+    <add key="eN" value="tel:77000" />
+    <add key="hS" value="tel:77003" />
+    <add key="iB" value="tel:77004" />
+    <add key="pD" value="tel:77006" />
+    <add key="yR" value="tel:77005" />
+    <add key="noschme" value="CACOR,CACOP" />
+    <add key="nostatus" value="D,F,S,I,M" />
+    <add key="localip" value="10.100.14.220" />
+    <add key="maxtval" value="50000"/>
+    <add key="maxdval" value="50000"/>
+    <add key="LDAPServer" value="LDAP://10.100.5.231"/>
+    <add key="BindUser" value="Avaya"/>
+    <add key="BindPass" value="Ab12345678"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="constr" connectionString="server=10.100.64.48,1770;database=AvayaIVR;uid=avayaivr;password=Ftl@2017;" />
+  </connectionStrings>
+  <applicationSettings>
+    <Properties.Settings>
+      <setting name="MaCosPinPadApp_com_moneygram_extws_AgentConnectService" serializeAs="String">
+        <value>https://extws.moneygram.com/extws/services/AgentConnect1105</value>
+      </setting>
+      <setting name="customshape1_MyDataSupplier_User" serializeAs="String">
+        <value>http://192.168.1.3/MacosWebService/user.asmx</value>
+      </setting>
+    </Properties.Settings>
+  </applicationSettings>
+  <system.web>
+    <!--
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+    -->
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID" />
+        <authentication mode="Windows" />
+        <identity impersonate="false" />
+  </system.web>
+  <system.serviceModel>
+    <bindings />
+    <client />
+  </system.serviceModel>
+</configuration>
+<!--http://localhost/fbnservice/user.asmx http://10.2.100.193:8087/user.asmx-->
